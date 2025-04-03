@@ -7,7 +7,7 @@ import Layout from "./components/layout/Layout";
 import SearchPage from "./pages/SearchPage";
 import NotFound from './pages/NotFound';
 import AnimePage from "./pages/AnimePage";
-import Contact from "./pages/Contact";
+import Contact from "./pages/Contact/Contact";
 import AnimeDetailsPage from "./pages/AnimeDetailsPage";
 import FavoriteAnime from "./pages/FavoriteAnime";
 
