@@ -1,0 +1,480 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --primary: #201f31;
+  --complementary: #ffffff;
+  --brand: #fb9ec6;
+  --brandDark: #f977af;
+}
+
+* {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  margin: 0 !important;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin: 0 auto !important;
+  width: 75%;
+}
+
+/* [START] Header */
+.customNav {
+  background-color: var(--primary);
+  color: var(--complementary) !important;
+  padding: 24px 0px !important;
+  font-weight: 500;
+  /* position: fixed !important;
+  overflow: hidden !important;
+  top: 0 !important;
+  width: 100% !important; */
+}
+.navbar-brand {
+  color: var(--brand) !important;
+  font-weight: 700;
+  font-size: 24px;
+}
+.nav-link {
+  color: var(--complementary) !important;
+  font-size: 18px;
+  margin-right: 10px !important;
+  transition: color 0.4s ease-in-out !important;
+}
+.nav-link:hover {
+  color: var(--brand) !important;
+}
+/* [END] Header */
+
+/* [START] Hero */
+.heroContainer {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.heroLeft {
+  width: 80%;
+  padding: 0 5rem;
+}
+.heroLeft h1 {
+  font-size: 52px;
+  font-weight: 700;
+}
+.heroLeft span {
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--brand);
+}
+.heroLeft p {
+  font-size: 18px;
+  padding: 20px 0 40px 0;
+}
+.heroBtn {
+  font-size: 18px;
+  text-decoration: none;
+  background-color: var(--brand);
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 12px;
+
+  &:hover {
+    background-color: var(--brandDark);
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+.heroRight {
+  display: flex;
+  justify-content: END;
+}
+.heroRight img {
+  width: 50vw;
+  height: 100vh;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+/* [END] Hero */
+
+/* [START] Footer */
+.footer {
+  display: flex;
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0px 24px 0px;
+  background-color: var(--primary);
+  /* position: fixed;
+  bottom: 0;
+  width: 100%; */
+}
+.footer p {
+  margin: 0;
+  color: var(--complementary);
+}
+/* [END] Footer */
+
+
+/* [START] Search Anime Page */
+.searchWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0 64px 0;
+}
+.searchContainer h2 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 40px;
+}
+
+/* Search Box Component */
+.search {
+  justify-self: center;
+  border: none;
+  padding: 1rem 2rem 1rem 2rem;
+  font-size: 18px;
+  border-radius: 12px;
+  width: 40rem;
+}
+/* [END] Search Anime Page */
+
+/* [START] Anime Page */
+.browseAnimeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0 64px 0;
+}
+.browseAnimeContainer h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.animeCategory h2 {
+  padding-bottom: 17px;
+  font-size: 32px;
+  font-weight: 700;
+}
+.animeCategory span {
+  color: var(--brand);
+}
+/* Anime Card */
+.animeCard {
+  list-style: none;
+  text-align: center;
+  padding-left: 1rem;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: min-content;
+}
+.cardImage img {
+  border-radius: 8px;
+}
+.cardTitle h3 {
+  padding-top: 16px;
+  font-size: 18px;
+  /* font-weight: 600; */
+}
+/* Anime list  */
+.animeList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 48px;
+}
+/* [END] Anime Card */
+
+/* [START] Anime Details */
+.animeDetails {
+  padding: 80px 0 64px 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+/* left side */
+.leftSideDetails {
+  display: flex;
+  flex-direction: column;
+}
+.imgContainer img {
+  border-radius: 8px;
+  width: 20rem;
+}
+.animeRatings {
+  color: var(--complementary);
+  padding: 25.5px 0;
+  display: flex;
+  gap: 17px;
+  flex-direction: column;
+}
+.animeRatings p  {
+  padding: 14px;
+  background-color: var(--primary);
+  border-radius: 8px;
+}
+.detailsContainer  {
+  color: var(--complementary);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary);
+  border-radius: 8px;
+  padding: 17;
+  padding: 1rem;
+}
+.detailsContainer p {
+  display: flex;
+  padding: 8.5px 0;
+  flex-direction: column;
+  text-transform: capitalize;
+}
+
+/* right side */
+.rightSideDetails {
+  display: flex;
+  flex-direction: column;
+  /* background-color: orange; */
+  padding: 0 3rem;
+}
+.descContainer h2 {
+  padding-bottom: 17px;
+  font-size: 32px;
+  font-weight: 700;
+}
+.descContainer p {
+  color: var(--complementary);
+  font-size: 16px;
+  background-color: var(--primary);
+  border-radius: 8px;
+  padding: 1.8rem;
+  line-height: 27px;
+}
+.trailerContainer {
+  padding-top: 34px;
+}
+.trailerContainer h3 {
+  padding-bottom: 17px;
+  font-size: 24px;
+  font-weight: 700;
+}
+/* favorites button */
+.animeCard {
+  position: relative;
+}
+.favoriteButton {
+  position: absolute;
+  top: 10px; 
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease; 
+}
+.animeCard:hover .favoriteButton {
+  opacity: 1;
+}
+.favoriteButton.favorited {
+  opacity: 1;
+}
+
+.filledStar {
+  color: gold;
+  font-size: 2rem;
+}
+.emptyStar {
+  color: grey;
+  font-size: 2rem;
+}
+/* [END] Anime Details */
+
+/* [START] Favorite Anime Page */
+.favoriteContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0 64px 0;
+  min-height: 85vh;
+}
+.favoriteContainer h2 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 40px;
+}
+
+
+/* [START] Error Message */
+.errorMsg {
+  display: flex;
+  justify-content: center;
+  /* padding-bottom: 64px; */
+  height: 60vh;
+}
+/* [END] Error Message */
+
+/* [START] Loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  height: 60vh;
+}
+/* [END] Loader */
+
+/* [START] Not Found Page */
+.notFound {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.notFound h2 {
+  /* background-color: rebeccapurple; */
+color: var(--brand);
+font-size: 180px;
+font-weight: 700;
+}
+.notFound p {
+font-size: 30px;
+padding: 0 0 32px 0;
+}
+/* [END] Not Found Page */
+
+/* [START] Contact Page */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 0 64px 0;
+  min-height: 90vh;
+}
+.formTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.formTitle h2 {
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 16px;
+}
+.formTitle p {
+  font-size: 18px;
+  padding-bottom: 25px;
+}
+.inputBox {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+}
+.inputBox label {
+  padding-bottom: 6px;
+}
+.inputBox input {
+  border: none;
+  border-radius: 12px;
+  padding: 0.7rem;
+}
+.inputBox textarea {
+  height: 10rem;
+  border-radius: 12px;
+}
+.submitBtn {
+  text-decoration: none;
+  font-size: 18px;
+  background-color: var(--brand);
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+
+  &:hover {
+    background-color: var(--brandDark);
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+.emptyInput {
+  padding-top: 6px;
+  color: #f86464;
+
+}
+/* [END] Contact Page */
+
+/* [START] Dark Mode Button  */
+.toggleButton {
+  color: var(--complementary);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--complementary);
+  transition: transform 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+.toggleButton:hover {
+  transform: scale(0.98);
+  color: var(--brand);
+}
+/* styles for toggling the dark mode button */
+body {
+  background-color: var(--complementary);
+  color: black;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+body.dark-mode {
+  background-color: #27263c;
+  color: var(--complementary);
+  transition: 0.4s ease-in-out;
+}
+body.dark-mode a {
+  color: var(--complementary);
+  transition: 0.4s ease-in-out;
+}
+body a {
+  color: black;
+  transition: 0.4s ease-in-out;
+}
+body input {
+  background-color: var(--primary);
+  color: var(--complementary);
+  transition: 0.4s ease-in-out;
+}
+body.dark-mode input {
+  background-color: var(--complementary);
+  color: black;
+  transition: 0.4s ease-in-out;
+}
+body textarea {
+  background-color: var(--primary);
+  color: var(--complementary);
+  transition: 0.4s ease-in-out;
+}
+body.dark-mode textarea {
+  background-color: var(--complementary);
+  color: black;
+  transition: 0.4s ease-in-out;
+}
+body.dark-mode button {
+  color: white;
+  transition: 0.4s ease-in-out;
+}
+body  button {
+  color: black;
+  transition: 0.4s ease-in-out;
+}
+/* [END] Dark Mode Button  */
