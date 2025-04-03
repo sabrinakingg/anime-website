@@ -17,6 +17,7 @@ const Contact = () => {
     control,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     resolver: joiResolver(schema),
     defaultValues: {
@@ -26,7 +27,6 @@ const Contact = () => {
     },
   });
 
-
   function onSubmit(data) {
     // Sanitize the inputs before sending them
     const sanitizedData = {
@@ -34,8 +34,11 @@ const Contact = () => {
       email: DOMPurify.sanitize(data.email),
       message: DOMPurify.sanitize(data.message),
     };
-    
+
     console.log(sanitizedData);
+
+    // Resets the form after submission
+    reset();
   }
 
   return (
@@ -48,32 +51,34 @@ const Contact = () => {
       <Form noValidate="noValidate" onSubmit={handleSubmit(onSubmit)}>
         {/* Full Name */}
         <div className="inputBox">
-          <Form.Label>Full Name</Form.Label>
+          <Form.Label htmlFor="name">Full Name</Form.Label>
           <Controller
             name="name"
             control={control}
-            render={({ field }) => <Form.Control {...field} />}
+            render={({ field }) => <Form.Control {...field} id="name" />}
           />
           {errors.name && <p className="emptyInput">{errors.name.message}</p>}
         </div>
         {/* Email */}
         <div className="inputBox">
-          <Form.Label>Email</Form.Label>
+          <Form.Label htmlFor="email">Email</Form.Label>
           <Controller
             name="email"
             control={control}
-            render={({ field }) => <Form.Control {...field} />}
+            render={({ field }) => <Form.Control {...field} id="email" />}
           />
           {errors.email && <p className="emptyInput">{errors.email.message}</p>}
         </div>
 
         {/* Message */}
         <div className="inputBox">
-          <Form.Label>Message</Form.Label>
+          <Form.Label htmlFor="message">Message</Form.Label>
           <Controller
             name="message"
             control={control}
-            render={({ field }) => <Form.Control {...field} as="textarea" />}
+            render={({ field }) => (
+              <Form.Control {...field} id="message" as="textarea" />
+            )}
           />
           {errors.message && (
             <p className="emptyInput">{errors.message.message}</p>
