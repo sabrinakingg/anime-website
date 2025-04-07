@@ -1,9 +1,12 @@
 import { useEffect } from "react";
 import { useState } from "react";
+
 import Main from "../components/Main";
 import AnimeList from "../components/AnimeList";
 import Loader from "../components/features/Loader/Loader";
 import ErrorMessage from "../components/features/Error/ErrorMessage";
+
+import { API_BASE_URL } from "../config";
 
 // AnimePage component fetches and displays the top trending and currently airing anime. It manages loading and error states and displays relevant data accordingly. The component fetches data from the Jikan API to retrieve the anime information.
 
@@ -27,7 +30,7 @@ function AnimePage() {
         setError("");
 
         // Fetch top anime
-        const topRes = await fetch(`https://api.jikan.moe/v4/top/anime`);
+        const topRes = await fetch(`${API_BASE_URL}/top/anime`);
         if (!topRes.ok) {
           // If the response isn't OK, throw an error
           throw new Error("Something went wrong while fetching anime");
@@ -41,7 +44,7 @@ function AnimePage() {
         setTopAnime(topData.data.slice(0, 5));
 
         // Fetch airing anime
-        const airingRes = await fetch(`https://api.jikan.moe/v4/seasons/now`);
+        const airingRes = await fetch(`${API_BASE_URL}/seasons/now`);
         if (!airingRes.ok) {
           // If the response isn't OK, throw an error
           throw new Error("Something went wrong while fetching anime");

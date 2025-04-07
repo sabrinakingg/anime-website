@@ -1,10 +1,13 @@
 import { useEffect } from "react";
 import { useState } from "react";
+
 import Main from "../components/Main";
 import SearchBox from "../components/SearchBox";
 import AnimeList from "../components/AnimeList";
 import Loader from "../components/features/Loader/Loader";
 import ErrorMessage from "../components/features/Error/ErrorMessage";
+
+import { API_BASE_URL } from "../config";
 
 function SearchPage() {
   const [anime, setAnime] = useState([]);
@@ -24,7 +27,7 @@ function SearchPage() {
           setError("");
           // fetch all the animes from api
           const res = await fetch(
-            `https://api.jikan.moe/v4/anime?q=${query}&sfw&limit=15`
+            `${API_BASE_URL}/anime?q=${query}&sfw&limit=15`
           );
           // if the response isnt ok
           if (!res.ok) {
