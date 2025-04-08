@@ -69,9 +69,6 @@ function SearchPage() {
           <SearchBox query={query} setQuery={setQuery} />
         </div>
         <div className="animeCategory">
-          {/* <h2>
-          <span>Airing</span> Now
-          </h2> */}
           <Main>
             <div className="box">
               {isLoading && <Loader />}

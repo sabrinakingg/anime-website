@@ -23,10 +23,10 @@
   color: var(--complementary) !important;
   padding: 24px 0px !important;
   font-weight: 500;
-  /* position: fixed !important;
-  overflow: hidden !important;
-  top: 0 !important;
-  width: 100% !important; */
+  /* position: fixed;
+  overflow: hidden;
+  top: 0;
+  width: 100%; */
 }
 .navbar-brand {
   color: var(--brand) !important;
@@ -183,7 +183,6 @@
 .cardTitle h3 {
   padding-top: 16px;
   font-size: 18px;
-  /* font-weight: 600; */
 }
 /* Anime list  */
 .animeList {
@@ -244,7 +243,6 @@
 .rightSideDetails {
   display: flex;
   flex-direction: column;
-  /* background-color: orange; */
   padding: 0 3rem;
 }
 .descContainer h2 {
@@ -343,7 +341,6 @@
   justify-content: center;
 }
 .notFound h2 {
-  /* background-color: rebeccapurple; */
 color: var(--brand);
 font-size: 180px;
 font-weight: 700;
